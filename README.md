@@ -2,7 +2,7 @@
 
 Simple script to install the S6-overlay into a docker image.
 
-The script will determine the platform and install the correct binaries from the [s6-overlay repository in Github](https://github.com/just-containers/s6-overlay). You will need to add the rc.d configuration needed yourself.
+The script will determine the platform and install the correct binaries from the [s6-overlay repository on Github](https://github.com/just-containers/s6-overlay). You will need to add the rc.d configuration needed yourself.
 
 ## Usage
 
