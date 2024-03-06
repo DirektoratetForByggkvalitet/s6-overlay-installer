@@ -1,4 +1,17 @@
-#!/bin/bash
+#!/bin/sh
+
+if [ "$1" != "--doit" ]; then
+  if type zsh; then 
+    exec zsh -- "@0" --doit
+  elif type bash; then
+    exec bash -- "@0" --doit
+  elif type ksh; then
+    exec ksh -- "@0" --doit
+  else
+    echo "Bash, ksh or zsh required"
+    exit 127
+  fi
+fi
 
 : "${S6_OVERLAY_VERSION:=3.1.6.2}"
 
@@ -23,3 +36,4 @@ do
 done
 
 echo "S6-overlay installed"
+exit 0

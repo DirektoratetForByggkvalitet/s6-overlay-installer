@@ -16,9 +16,9 @@ RUN /s6-overlay-installer/s6_install.sh && rm -rf /s6-overlay-installer
 
 ## Requirements
 
-The script requires bash in order to run. Some images might require bash to be installed. This can be accomplished in Alpine Linux by the following line in the Dockerfile:
+The script requires bash, zsh or ksh in order to run. Some images might require a shell to be installed. This can be accomplished in Alpine Linux by the following line in the Dockerfile:
 ```
-RUN apk add --no-cache bash
+RUN apk add --no-cache zsh
 ```
 
 The environment variable S6_OVERLAY_VERSION will be needed in order to install versions of S6-overlay beyond the version set as default in the script (currently 3.1.6.2).
