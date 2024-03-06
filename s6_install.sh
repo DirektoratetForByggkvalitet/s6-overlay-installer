@@ -2,11 +2,11 @@
 
 if [ "$1" != "--doit" ]; then
   if type zsh > /dev/null; then 
-    exec zsh -- "@0" --doit
+    exec zsh -- "$0" --doit
   elif type bash > /dev/null; then
-    exec bash -- "@0" --doit
+    exec bash -- "$0" --doit
   elif type ksh > /dev/null; then
-    exec ksh -- "@0" --doit
+    exec ksh -- "$0" --doit
   else
     echo "Bash, ksh or zsh required"
     exit 127
