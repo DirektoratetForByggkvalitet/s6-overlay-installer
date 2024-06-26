@@ -10,7 +10,7 @@ Use the following code in your Dockerfile in order to install S6-overlay:
 
 ```
 ENV S6_OVERLAY_VERSION="3.1.6.2" # Change when you need to update S6-overlay
-ADD https://bitbucket.org/dibk/s6-overlay-installer.git /s6-overlay-installer
+ADD https://github.com/DirektoratetForByggkvalitet/s6-overlay-installer.git /s6-overlay-installer
 RUN /s6-overlay-installer/s6_install.sh && rm -rf /s6-overlay-installer
 ```
 
