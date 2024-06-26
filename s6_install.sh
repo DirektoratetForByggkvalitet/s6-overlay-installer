@@ -13,7 +13,7 @@ if [ "$1" != "--doit" ]; then
   fi
 fi
 
-: "${S6_OVERLAY_VERSION:=3.1.6.2}"
+: "${S6_OVERLAY_VERSION:=3.2.0.0}"
 
 arch=$(uname -m)
 echo "Installing S6-overlay, v${S6_OVERLAY_VERSION}, for ${arch}"
