@@ -22,3 +22,7 @@ RUN apk add --no-cache zsh
 ```
 
 The environment variable S6_OVERLAY_VERSION will be needed in order to install versions of S6-overlay beyond the version set as default in the script (currently 3.2.0.0).
+
+## License
+
+The code published here is licensed with the [MIT License](LICENSE).
