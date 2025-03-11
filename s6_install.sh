@@ -15,16 +15,15 @@ fi
 
 : "${S6_OVERLAY_VERSION:=3.2.0.2}"
 
-arch=$(uname -m)
-echo "Installing S6-overlay, v${S6_OVERLAY_VERSION}, for ${arch}"
-
+ARG TARGETARCH
+echo "Installing S6-overlay, v${S6_OVERLAY_VERSION}, for ${TARGETARCH}"
 # Endrer på filnavnet etter arkitektur.
-if [ "$arch" = "arm64" ]; then
+if [ "$TARGETARCH" = "arm64" ]; then
   code="aarch64"
-elif [ "$arch" = "amd64" ]; then
+elif [ "$TARGETARCH" = "amd64" ]; then
   code="x86_64"
 else
-  code=${arch}
+  code=${TARGETARCH}
 fi
 
 declare -a files=("s6-overlay-${code}.tar.xz" "s6-overlay-noarch.tar.xz" "s6-overlay-symlinks-noarch.tar.xz" "s6-overlay-symlinks-arch.tar.xz")
