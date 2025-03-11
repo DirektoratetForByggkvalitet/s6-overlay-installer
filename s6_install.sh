@@ -32,7 +32,8 @@ for file in "${files[@]}"
 do
     echo "Processing '${file}'"
     curl -Lso /tmp/${file} https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/${file}
-    tar -C / -Jxpf /tmp/${file}
+    tar -C / -Jxpf 
+    rm /tmp/${file}
 done
 
 echo "S6-overlay installed"
