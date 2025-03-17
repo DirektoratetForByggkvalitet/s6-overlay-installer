@@ -14,8 +14,7 @@ if [ "$1" != "--doit" ]; then
 fi
 
 : "${S6_OVERLAY_VERSION:=3.2.0.2}"
-
-ARG TARGETARCH
+: "${TARGETARCH:=amd64}"
 echo "Installing S6-overlay, v${S6_OVERLAY_VERSION}, for ${TARGETARCH}"
 # Endrer på filnavnet etter arkitektur.
 if [ "$TARGETARCH" = "arm64" ]; then
